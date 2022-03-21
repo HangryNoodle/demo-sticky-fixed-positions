@@ -6,4 +6,48 @@ header,
 section {
     padding: 1rem;
 }
+
+
 /* developer styles go here */
+
+header,
+section {
+    padding: 1rem;
+}
+
+
+/* fixed position elemetns are similar to absolute positioned elements - the natural space the element took up in the flow of the document is now gone. if needed, once this element is positioned, create space for it. fixed positioned elements stay in place when scrolling */
+
+.snowflake {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+}
+
+p {
+    max-width: 80%;
+}
+
+
+/* sticky positioned elements work like relative elements. They stay in the natural flow until a distance has been reached and then become sticky to the viewport */
+
+h1 {
+    position: sticky;
+    top: 0;
+    /* this does not work, because there are no siblings to scroll underneath this element */
+}
+
+h2 {
+    position: sticky;
+    top: 0;
+    /* this works because the p and h3 elements are direct siblings and they can scroll underneath this element */
+    background-color: tomato;
+    padding: 1rem 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    position: sticky;
+    top: 68px;
+    background-color: white;
+}
